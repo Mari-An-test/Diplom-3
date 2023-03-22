@@ -1,20 +1,14 @@
 import config.Config;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import model.User;
 import model.UserRequest;
 import org.junit.*;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import page.LoginPage;
 import page.MainPage;
-import page.RegisterPage;
 import page.PasswordPage;
-
-import java.util.concurrent.TimeUnit;
+import page.RegisterPage;
 
 import static org.junit.Assert.assertTrue;
 

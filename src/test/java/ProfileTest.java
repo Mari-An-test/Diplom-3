@@ -1,21 +1,15 @@
 import config.Config;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import model.User;
 import model.UserRequest;
 import org.junit.*;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.html5.LocalStorage;
 import org.openqa.selenium.html5.WebStorage;
 import page.LoginPage;
 import page.MainPage;
 import page.ProfilePage;
-
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -84,6 +78,7 @@ public class ProfileTest {
         mainPage.waitLoading();
         assertEquals("Оказались на главной странице после Конструктора", Config.SITE_ADDRESS + "/", driver.getCurrentUrl());
     }
+
     @Test
     public void checkFromMainToProfilePassage() {
         mainPage.waitLoading();
@@ -91,6 +86,7 @@ public class ProfileTest {
         profilePage.waitLoading();
         assertEquals("Оказались в личном кабинете после главной страницы", Config.SITE_ADDRESS + Config.PERSONAL, driver.getCurrentUrl());
     }
+
     @After
     public void tearDown() {
         System.out.println(driver.manage().getCookies());

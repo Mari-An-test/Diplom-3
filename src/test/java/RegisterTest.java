@@ -7,14 +7,9 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import page.LoginPage;
 import page.RegisterPage;
-
-import java.util.concurrent.TimeUnit;
 
 public class RegisterTest {
 
