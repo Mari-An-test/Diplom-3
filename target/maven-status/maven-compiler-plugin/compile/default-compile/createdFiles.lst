@@ -1,0 +1,9 @@
+org\example\Main.class
+page\PasswordPage.class
+page\ProfilePage.class
+page\RegisterPage.class
+config\Config.class
+model\User.class
+page\MainPage.class
+model\UserRequest.class
+page\LoginPage.class
